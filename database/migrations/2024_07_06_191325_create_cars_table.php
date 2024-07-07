@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
+            $table->string('owner')->nullable();
             $table->string('make');
             $table->string('model');
-            $table->year('year_born');
-            $table->integer('mileage');
-            $table->string('colour');
+            $table->year('year_born')->nullable();
+            $table->integer('mileage')->nullable();
+            $table->string('colour')->nullable();
             $table->timestamps();
         });
     }
